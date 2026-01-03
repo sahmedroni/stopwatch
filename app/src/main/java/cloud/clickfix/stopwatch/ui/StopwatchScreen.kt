@@ -17,6 +17,7 @@ import androidx.compose.material.icons.filled.DarkMode
 import androidx.compose.material.icons.filled.LightMode
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Refresh
+import androidx.compose.material.icons.filled.Timer
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -67,13 +68,22 @@ fun StopwatchScreen(viewModel: StopwatchViewModel) {
             topBar = {
                 CenterAlignedTopAppBar(
                     title = { 
-                        Text(
-                            "Stopwatch",
-                            style = MaterialTheme.typography.headlineMedium.copy(
-                                fontWeight = FontWeight.Light,
-                                letterSpacing = 2.sp
+                        Row(verticalAlignment = Alignment.CenterVertically) {
+                            Icon(
+                                imageVector = Icons.Default.Timer,
+                                contentDescription = null,
+                                modifier = Modifier.size(28.dp),
+                                tint = MaterialTheme.colorScheme.primary
                             )
-                        ) 
+                            Spacer(modifier = Modifier.width(12.dp))
+                            Text(
+                                "Stopwatch",
+                                style = MaterialTheme.typography.headlineMedium.copy(
+                                    fontWeight = FontWeight.Light,
+                                    letterSpacing = 2.sp
+                                )
+                            )
+                        }
                     },
                     actions = {
                         IconButton(onClick = { viewModel.toggleTheme() }) {
