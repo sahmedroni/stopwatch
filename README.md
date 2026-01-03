@@ -40,7 +40,7 @@ The app follows the recommended **Android Architecture Guidelines**:
 
 1.  **Clone the repository**:
     ```bash
-    git clone https://github.com/your-username/stopwatch-app.git
+    git clone https://github.com/sahmedroni/stopwatch.git
     ```
 2.  **Open in Android Studio**:
     - Open Android Studio and select "Open an existing Project".
